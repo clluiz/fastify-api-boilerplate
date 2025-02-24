@@ -5,10 +5,10 @@ Boilerplate para uma api usando fastify com:
 * Prisma
 * Node-tap
 * Postgresql
-* Typescript
-* Fastify
+* Typescript ✅
+* Fastify ✅
 * Clean architecture
 * CI/CD github actions + AWS
 * Swagger
-* Eslint
-* Prettier
+* Eslint ✅
+* Prettier ✅

@@ -1,6 +1,5 @@
-import dotenv from "dotenv"
+import dotenv from "dotenv";
 
-dotenv.config()
+dotenv.config();
 
-console.log(process.env)
-
+console.log(process.env);

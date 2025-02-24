@@ -3,7 +3,7 @@
 Boilerplate para uma api usando fastify com:
 
 * Prisma
-* Node-tap
+* Node-tap ✅
 * Postgresql
 * Typescript ✅
 * Fastify ✅

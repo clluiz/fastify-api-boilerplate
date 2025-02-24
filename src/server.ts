@@ -1,5 +1,5 @@
 import Fastify, { FastifyInstance, RouteShorthandOptions } from "fastify";
-import { Server, IncomingMessage, ServerResponse } from "http";
+//import { Server, IncomingMessage, ServerResponse } from "http";
 
 const server: FastifyInstance = Fastify({});
 
@@ -18,7 +18,7 @@ const opts: RouteShorthandOptions = {
   },
 };
 
-server.get("/ping", opts, async (request, reply) => {
+server.get("/ping", opts, async () => {
   return { pong: "it worked!" };
 });
 
@@ -28,6 +28,7 @@ const start = async () => {
 
     const address = server.server.address();
     const port = typeof address === "string" ? address : address?.port;
+    console.log(`Server running on port ${port}`)
   } catch (err) {
     server.log.error(err);
     process.exit(1);

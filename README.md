@@ -11,3 +11,4 @@ Boilerplate para uma api usando fastify com:
 * Swagger
 * Eslint ✅
 * Prettier ✅
+* Lefthook ✅

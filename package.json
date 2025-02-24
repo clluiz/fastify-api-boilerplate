@@ -1,11 +1,12 @@
 {
 	"type": "module",
 	"dependencies": {
+		"dotenv": "^16.4.7",
 		"fastify": "^5.2.1"
 	},
 	"scripts": {
 		"dev": "tsc && node dist/server.js",
-		"build": "echo building...",
+		"build": "tsc",
 		"lint": "eslint src/**/*.{js,ts}",
 		"format": "prettier --write ./**/*.{js,ts}",
 		"init:prisma": "prisma init"

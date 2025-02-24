@@ -4,7 +4,6 @@ Boilerplate para uma api usando fastify com:
 
 * Prisma ✅
 * Node-tap ✅
-* Postgresql
 * Typescript ✅
 * Fastify ✅
 * Clean architecture

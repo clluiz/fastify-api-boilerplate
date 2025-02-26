@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@fastify/autoload':
+        specifier: ^6.1.0
+        version: 6.1.0
       dotenv:
         specifier: ^16.4.7
         version: 16.4.7
@@ -255,6 +258,9 @@ packages:
 
   '@fastify/ajv-compiler@4.0.2':
     resolution: {integrity: sha512-Rkiu/8wIjpsf46Rr+Fitd3HRP+VsxUFDDeag0hs9L0ksfnwx2g7SPQQTFL0E8Qv+rfXzQOxBJnjUB9ITUDjfWQ==}
+
+  '@fastify/autoload@6.1.0':
+    resolution: {integrity: sha512-ltFiI5u5KETSqVXq9AIYtiTqrQn4fvuiETR8N78L119JMLJUqHZ6EqZw77syrMf1N9OMCK8z7YktntK9LaD7Pw==}
 
   '@fastify/error@4.0.0':
     resolution: {integrity: sha512-OO/SA8As24JtT1usTUTKgGH7uLvhfwZPwlptRi2Dp5P4KKmJI3gvsZ8MIHnNwDs4sLf/aai5LzTyl66xr7qMxA==}
@@ -2181,6 +2187,8 @@ snapshots:
       ajv: 8.17.1
       ajv-formats: 3.0.1(ajv@8.17.1)
       fast-uri: 3.0.6
+
+  '@fastify/autoload@6.1.0': {}
 
   '@fastify/error@4.0.0': {}
 

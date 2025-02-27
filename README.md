@@ -6,9 +6,9 @@ Boilerplate para uma api usando fastify com:
 * Node-tap ✅
 * Typescript ✅
 * Fastify ✅
-* Clean architecture
+* Clean architecture ✅
 * CI/CD github actions + AWS
-* Swagger
+* Swagger ✅
 * Eslint ✅
 * Prettier ✅
 * Lefthook ✅

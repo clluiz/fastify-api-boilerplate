@@ -5,7 +5,6 @@ import swaggerUI from "./infrastructure/plugins/swaggerUI.js";
 
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
-//import { Server, IncomingMessage, ServerResponse } from "http";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);

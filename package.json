@@ -2,8 +2,11 @@
 	"type": "module",
 	"dependencies": {
 		"@fastify/autoload": "^6.1.0",
+		"@fastify/swagger": "^9.4.2",
+		"@fastify/swagger-ui": "^5.2.2",
 		"dotenv": "^16.4.7",
-		"fastify": "^5.2.1"
+		"fastify": "^5.2.1",
+		"fastify-plugin": "^5.0.1"
 	},
 	"scripts": {
 		"dev": "tsc && node dist/server.js",

@@ -1,5 +1,8 @@
 import Fastify, { FastifyInstance } from "fastify";
 import fastifyAutoload from "@fastify/autoload";
+import swagger from "./infrastructure/plugins/swagger.js";
+import swaggerUI from "./infrastructure/plugins/swaggerUI.js";
+
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 //import { Server, IncomingMessage, ServerResponse } from "http";
@@ -9,28 +12,12 @@ const __dirname = dirname(__filename);
 
 const server: FastifyInstance = Fastify({});
 
+server.register(swagger);
+server.register(swaggerUI);
+
 server.register(fastifyAutoload, {
   dir: join(__dirname, "infrastructure/http/routes"),
 });
-
-// const opts: RouteShorthandOptions = {
-//   schema: {
-//     response: {
-//       200: {
-//         type: "object",
-//         properties: {
-//           pong: {
-//             type: "string",
-//           },
-//         },
-//       },
-//     },
-//   },
-// };
-
-// server.get("/ping", opts, async () => {
-//   return { pong: "it worked!" };
-// });
 
 const start = async () => {
   try {

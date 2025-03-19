@@ -11,7 +11,7 @@ export default fp(async function (fastify: FastifyInstance) {
         description: "API documentation with Fastify and Swagger",
         version: "1.0.0",
       },
-      host: "localhost:3000",
+      host: `localhost:${fastify.config.PORT}`,
       schemes: ["http"],
       consumes: ["application/json"],
       produces: ["application/json"],

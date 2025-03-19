@@ -13,4 +13,4 @@ Boilerplate para uma api usando fastify com:
 * Prettier ✅
 * Lefthook ✅
 * Docker image with multi stage build
-* Add Postgres docker image
+* Add Postgres docker image ✅

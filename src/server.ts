@@ -39,7 +39,6 @@ server.register(fastifyAutoload, {
 
 const start = async () => {
   try {
-    console.log(server.config.PORT);
     await server.listen({ port: server.config.PORT });
 
     const address = server.server.address();

@@ -1,5 +1,6 @@
 import Fastify, { FastifyInstance } from "fastify";
 import fastifyAutoload from "@fastify/autoload";
+import fastifyEnv from "@fastify/env";
 import swagger from "./infrastructure/plugins/swagger.js";
 import swaggerUI from "./infrastructure/plugins/swaggerUI.js";
 
@@ -9,8 +10,26 @@ import { dirname, join } from "node:path";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
+const schema = {
+  type: "object",
+  required: ["PORT"],
+  properties: {
+    PORT: {
+      type: "string",
+      default: 3000,
+    },
+  },
+};
+
+const options = {
+  confKey: "config",
+  schema: schema,
+  dotenv: true,
+};
+
 const server: FastifyInstance = Fastify({});
 
+await server.register(fastifyEnv, options);
 server.register(swagger);
 server.register(swaggerUI);
 
@@ -20,7 +39,8 @@ server.register(fastifyAutoload, {
 
 const start = async () => {
   try {
-    await server.listen({ port: 3000 });
+    console.log(server.config.PORT);
+    await server.listen({ port: server.config.PORT });
 
     const address = server.server.address();
     const port = typeof address === "string" ? address : address?.port;

@@ -12,4 +12,8 @@ Boilerplate para uma api usando fastify com:
 * Eslint ✅
 * Prettier ✅
 * Lefthook ✅
+<<<<<<< HEAD
 * Docker image with multi stage build
+=======
+* Docker image with multi stage build
+>>>>>>> f2d5903395d442cb097693423f603130c7b55fb5

@@ -1,6 +1,9 @@
 import Fastify, { FastifyInstance } from "fastify";
 import fastifyAutoload from "@fastify/autoload";
 import fastifyEnv from "@fastify/env";
+import fastifyUserAgent from "fastify-user-agent";
+import cors from "@fastify/cors";
+import fastifyFormbody from "@fastify/formbody";
 import swagger from "./infrastructure/plugins/swagger.js";
 import swaggerUI from "./infrastructure/plugins/swaggerUI.js";
 
@@ -30,8 +33,13 @@ const options = {
 const server: FastifyInstance = Fastify({});
 
 await server.register(fastifyEnv, options);
+server.register(fastifyFormbody);
 server.register(swagger);
 server.register(swaggerUI);
+server.register(fastifyUserAgent);
+server.register(cors, {
+  origin: "*",
+});
 
 server.register(fastifyAutoload, {
   dir: join(__dirname, "infrastructure/http/routes"),
@@ -39,8 +47,7 @@ server.register(fastifyAutoload, {
 
 const start = async () => {
   try {
-    await server.listen({ port: server.config.PORT });
-
+    await server.listen({ port: server.config.PORT, host: "0.0.0.0" });
     const address = server.server.address();
     const port = typeof address === "string" ? address : address?.port;
     console.log(`Server running on port ${port}`);

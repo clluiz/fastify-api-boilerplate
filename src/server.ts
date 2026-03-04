@@ -45,6 +45,9 @@ server.register(fastifyAutoload, {
   dir: join(__dirname, "modules"),
   dirNameRoutePrefix: false,
   ignorePattern: /.*(controllers|entities|dtos|routes).*/,
+  options: {
+    prefix: "/api/",
+  },
 });
 
 process.on('unhandledRejection', (err) => {

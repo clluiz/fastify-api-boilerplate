@@ -3,7 +3,7 @@ import {
   FastifyPluginAsync,
   RouteShorthandOptions,
 } from "fastify";
-import { pong } from "../controllers/ping.controller.js";
+import { ping } from "../../controllers/ping.controller.js"
 
 const opts: RouteShorthandOptions = {
   schema: {
@@ -11,7 +11,7 @@ const opts: RouteShorthandOptions = {
       200: {
         type: "object",
         properties: {
-          pong: {
+          ping: {
             type: "string",
           },
         },
@@ -20,10 +20,10 @@ const opts: RouteShorthandOptions = {
   },
 };
 
-const pingRoutes: FastifyPluginAsync = async (
+const r1: FastifyPluginAsync = async (
   fastify: FastifyInstance,
 ): Promise<void> => {
-  fastify.get("/ping", opts, pong);
+  fastify.get("/", opts, ping);
 };
 
-export default pingRoutes;
+export default r1;

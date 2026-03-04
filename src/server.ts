@@ -4,8 +4,8 @@ import fastifyEnv from "@fastify/env";
 import fastifyUserAgent from "fastify-user-agent";
 import cors from "@fastify/cors";
 import fastifyFormbody from "@fastify/formbody";
-import swagger from "./infrastructure/plugins/swagger.js";
-import swaggerUI from "./infrastructure/plugins/swaggerUI.js";
+import swagger from "./shared/plugins/swagger.js";
+import swaggerUI from "./shared/plugins/swaggerUI.js";
 
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
@@ -61,7 +61,7 @@ const start = async () => {
     const address = server.server.address();
     const port = typeof address === "string" ? address : address?.port;
     console.log(`Server running on port ${port}`);
-    console.log(server.printRoutes());
+    //console.log(server.printRoutes());
   } catch (err) {
     console.error('Server startup error:', err);
     server.log.error(err);

@@ -2,7 +2,6 @@
 
 Boilerplate para uma api usando fastify com:
 
-* Prisma ✅
 * Node-tap ✅
 * Typescript ✅
 * Fastify ✅

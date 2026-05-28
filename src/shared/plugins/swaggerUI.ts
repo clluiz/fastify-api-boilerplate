@@ -18,8 +18,7 @@ export default fp(async function (fastify: FastifyInstance) {
     //     next();
     //   },
     // },
-    staticCSP: true,
-    transformStaticCSP: (header) => header,
+    staticCSP: false,
     // transformSpecification: (swaggerObject, request, reply) => {
     //   return swaggerObject;
     // },

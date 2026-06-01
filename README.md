@@ -1,11 +1,11 @@
-# Introdução
+# Introduction
 
-Boilerplate para uma api usando fastify com:
+Fastify api boilter plate with:
 
 * Node-tap ✅
 * Typescript ✅
 * Fastify ✅
-* Clean architecture ✅
+* Modular monolith archtecture ✅
 * Swagger ✅
 * Eslint ✅
 * Prettier ✅

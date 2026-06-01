@@ -8,7 +8,30 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - ./db_data:/var/lib/postgresql/data
+      - db_data:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U ${POSTGRESQL_USER} -d ${POSTGRESQL_DATABASE}" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+  # api:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #     target: production
+  #   image: fastify-api:latest
+  #   ports:
+  #     - "${PORT:-5000}:5000"
+  #   environment:
+  #     NODE_ENV: production
+  #     PORT: 5000
+  #     DATABASE_URL: postgresql://${POSTGRESQL_USER}:${POSTGRESQL_PASSWORD}@db:5432/${POSTGRESQL_DATABASE}
+  #   env_file:
+  #     - .env
+  #   depends_on:
+  #     db:
+  #       condition: service_healthy
+  #   restart: unless-stopped
 
 volumes:
   db_data:

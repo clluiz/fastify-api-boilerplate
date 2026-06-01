@@ -1,0 +1,29 @@
+# Git
+.git
+.gitignore
+
+# Editor / OS noise
+.DS_Store
+*.swp
+
+# Local env (never bake secrets into image)
+.env
+.env.*
+!.env.example
+
+# Source and tooling that are not needed at runtime
+src
+tsconfig.json
+eslint.config.js
+.eslintrc*
+.prettierrc
+.lefthook.yml
+.nvmrc
+*.md
+
+# Development artifacts
+node_modules
+dist
+
+# CI / misc
+.agents

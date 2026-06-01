@@ -7,10 +7,10 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const pingModule: FastifyPluginAsync = async (app) => {
-    app.register(fastifyAutoload, {
-        dir: join(__dirname, "routes"),
-        dirNameRoutePrefix: true,
-    });
+  app.register(fastifyAutoload, {
+    dir: join(__dirname, "routes"),
+    dirNameRoutePrefix: true,
+  });
 };
 
 export default pingModule;

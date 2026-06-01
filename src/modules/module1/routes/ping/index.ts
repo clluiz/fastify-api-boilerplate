@@ -3,7 +3,7 @@ import {
   FastifyPluginAsync,
   RouteShorthandOptions,
 } from "fastify";
-import { ping } from "../../controllers/ping.controller.js"
+import { ping } from "../../controllers/ping.controller.js";
 
 const opts: RouteShorthandOptions = {
   schema: {

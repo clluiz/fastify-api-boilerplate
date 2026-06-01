@@ -10,5 +10,5 @@ Fastify api boilter plate with:
 * Eslint ✅
 * Prettier ✅
 * Lefthook ✅
-* Docker image with multi stage build
+* Docker image with multi stage build ✅
 * Add Postgres docker image ✅

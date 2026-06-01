@@ -6,7 +6,6 @@ Boilerplate para uma api usando fastify com:
 * Typescript ✅
 * Fastify ✅
 * Clean architecture ✅
-* CI/CD github actions + AWS
 * Swagger ✅
 * Eslint ✅
 * Prettier ✅
